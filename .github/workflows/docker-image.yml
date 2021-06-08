@@ -29,6 +29,7 @@ jobs:
         export BOTS_PATH="./aiarena-test-bots/"
         export MAPS_PATH="./maps/"
         export REPLAYS_PATH="./replays/"
-        docker run -v ${CONFIG_PATH}:/root/aiarena-client/config.py -v ${MATCHES_PATH}:/root/aiarena-client/matches -v ${BOTS_PATH}:/root/aiarena-client/bots -v ${MAPS_PATH}:/root/StarCraftII/maps ${REPLAYS_PATH}:/root/aiarena-client/replays:rw -v -it aiarena
+        ls -l
+        docker run -v ${CONFIG_PATH}:/root/aiarena-client/config.py -v ${MATCHES_PATH}:/root/aiarena-client/matches -v ${BOTS_PATH}:/root/aiarena-client/bots -v ${MAPS_PATH}:/root/StarCraftII/maps ${REPLAYS_PATH}:/root/aiarena-client/replays:rw -v -it aiarena:latest
 
  
