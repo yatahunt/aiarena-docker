@@ -15,4 +15,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: |        
+        git clone https://github.com/aiarena/aiarena-test-bots
+        curl https://github.com/yatahunt/sc2patch/raw/master/Maps/2021Season2Ladder.zip maps.zip
+        mkdir maps
+        unzip maps.zip maps
+        docker build -t aiarena .
+        export CONFIG_PATH="./example_config.py"
+        export MATCHES_PATH="./match.txt"
+        export BOTS_PATH="./aiarena-test-bots/"
+        export MAPS_PATH="./maps/"
+        export REPLAYS_PATH="./replays/"
+        docker run -v ${CONFIG_PATH}:/root/aiarena-client/config.py -v ${MATCHES_PATH}:/root/aiarena-client/matches -v ${BOTS_PATH}:/root/aiarena-client/bots -v ${MAPS_PATH}:/root/StarCraftII/maps ${REPLAYS_PATH}:/root/aiarena-client/replays:rw -v -it aiarena
+
+ 
