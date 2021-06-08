@@ -19,7 +19,7 @@ jobs:
         git clone https://github.com/aiarena/aiarena-test-bots
         curl https://github.com/yatahunt/sc2patch/raw/master/Maps/2021Season2Ladder.zip maps.zip
         mkdir maps
-        unzip maps.zip maps
+        unzip maps.zip maps 
         docker build -t aiarena .
         export CONFIG_PATH="./example_config.py"
         export MATCHES_PATH="./match.txt"
