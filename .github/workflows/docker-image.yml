@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: |        
         git clone https://github.com/aiarena/aiarena-test-bots
-        wget https://raw.githubusercontent.com/yatahunt/sc2patch/master/Maps/2021Season2Ladder.zip maps.zip
+        wget -O maps.zip https://raw.githubusercontent.com/yatahunt/sc2patch/master/Maps/2021Season2Ladder.zip -q 
         mkdir maps
         unzip maps.zip maps 
         docker build -t aiarena .
