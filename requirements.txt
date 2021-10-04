@@ -31,7 +31,7 @@ termcolor==1.1.0
 urllib3==1.26.5
 virtualenv==20.4.7
 virtualenv-clone==0.5.4
-websockets==9.1
+websockets==10.0
 yarl==1.6.3
 uvloop==0.15.2
 aiohttp-jinja2==1.4.2
