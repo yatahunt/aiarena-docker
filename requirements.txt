@@ -33,7 +33,7 @@ virtualenv==20.4.7
 virtualenv-clone==0.5.4
 websockets==9.1
 yarl==1.6.3
-uvloop==0.15.2
+uvloop==0.16.0
 aiohttp-jinja2==1.4.2
 opencv-contrib-python==4.5.2.54
 opencv-python==4.5.2.54
