@@ -20,7 +20,7 @@ multidict==5.1.0
 numpy==1.19.3
 pipenv==2021.5.29
 portpicker==1.4.0
-protobuf==3.17.3
+protobuf==3.19.0
 psutil==5.8.0
 pyglet==1.5.15
 requests==2.25.1
